@@ -1,0 +1,195 @@
+/* css ref file for other pages */
+body{
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    background-size: auto;
+    
+
+    /* */
+    height: 100vh;
+    padding:0; margin: 0;
+}
+html, body {
+    min-height: 100vh;
+}
+
+/* RECIPES PAGE */
+.ingredientsList {
+    font-size: 25px;
+}
+h1, h2, h3, .topnavButton a, p, ol, u, button  {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+/* ------------------- */
+
+/*TOPNAV BAR*/
+.socialsAnimation:hover, .containerTestItem:hover, .topnavButton:hover
+{
+   transform:translateX(5%) scale(1.065);}
+img.logo{
+    position:absolute; top:3px; left:5px; float:left;
+    max-width: 10%;
+    max-height: 10%;
+    border: 2px inset #1F2937;
+    border-radius: 25%;
+    transition: transform 0.75s ease-in-out;
+    animation: fadeOntoPageLogo 2.1s;
+    animation-iteration-count: 1;
+}
+img.logo:hover{
+    transform: rotate(360deg) translateZ(0);
+}
+
+.topnavButton a {
+    text-decoration: none;
+    background-color: #1F2937;
+    color:white;
+    padding: 5px 10px;
+    text-align: center;
+    display: flex;
+    font-size: 20px;
+    transition-duration: 0.4s;
+}
+.topnavButton {
+    text-decoration: none;
+    border-right: 2px solid #0d1116;
+    background-color: #1F2937;
+    color:white;
+    cursor:pointer;
+    transition: transform 1.5s cubic-bezier(0, 1.53, 0.72, 0.83);
+    animation: fadeOntoPageLogo 2.1s;
+    animation-iteration-count: 1;
+}
+.containerTest {
+    display: flex;
+    padding: 5%;
+    flex: 0 1 50px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    border: 3px solid #1F2937; border-radius: 50px;
+    margin-right: 12%; margin-left: 12%;
+    flex-wrap: wrap;
+    animation: fadeOntoPageLogo 2.1s;
+    animation-iteration-count: 1;
+}
+.containerTestItem {
+    flex: 1 1 100px;
+    display: flex;
+    border: 3px solid #1F2937; border-radius: 10px;
+    margin-left: auto; margin-right: auto;
+    padding: 100px;
+    cursor: pointer;
+    width: 100px;
+    transition: transform 1.5s cubic-bezier(0, 1.53, 0.72, 0.83);
+}
+.containerTestItem img{
+    width: 100px; height: 100px;
+}
+.containerTestItem a{
+    margin-left: auto; margin-right: auto;
+    color:black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.topnav div {
+    flex: 1 1 0;
+}
+.topnav {
+    border-radius: 15px;
+    position:absolute; top:0.1%; left: 7%; width: 93%;
+    background-color: #1F2937; overflow: hidden;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    border-bottom: 3px solid #0d1116;
+}
+
+/* ------------- */
+
+
+/* PAGE LOADING CODE (WIP) */
+#loadcontainer {
+    position: fixed;
+    top: 0; width: 51%; height: 100%; 
+    background: #222222;
+    z-index:1000;
+}
+
+#loadcontainer .loader-left{
+left: 0;
+}
+#loadcontainer .loader-right{
+right: 0;
+}
+
+#loader {
+    z-index: 3000;
+}
+h1{
+    color: #EEEEEE;
+}
+
+/* Loaded */
+.loaded #loadcontainer .loader-right {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(-100%);  /* IE 9 */
+    transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+}
+ 
+.loaded #loadcontainer .loader-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(100%);  /* IE 9 */
+    transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+}
+
+.loaded #loader {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+}
+
+.loaded #loadcontainer {
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+                transform: translateY(-100%);
+ 
+        -webkit-transition: all 0.3s 0.6s ease-out;
+                transition: all 0.3s 0.6s ease-out;
+}
+
+.loaded #loadcontainer .loader-right, .loaded #loadcontainer .loader-left {
+    -webkit-transition: all 0.3s 0.3s ease-out;
+            transition: all 0.3s 0.3s ease-out;
+}
+
+/* ANIMATIONS */
+@keyframes fadeOntoPageLogo {
+    0%{opacity: 0;
+        left: -20px;}
+    100%{opacity: 1;}
+    }
+ @keyframes fadeOntoPage {
+        0%{opacity: 0;
+        position:relative; margin-top: 15%;}
+        100%{opacity: 1;}
+    }
+/* */
+.colorstrip3 {
+    border: #1F2937 solid 5px; background-color: #1F2937;
+    margin-top: 20%;
+    height:40%
+}
+
+.colorstrip3 .bigText {
+    position: relative; margin-top: 5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    animation: fadeOntoPage 1.5s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+
