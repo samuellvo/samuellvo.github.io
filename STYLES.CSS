@@ -12,7 +12,6 @@ body{
 html, body {
     min-height: 100vh;
 }
-
 /* RECIPES PAGE */
 .ingredientsList {
     font-size: 25px;
@@ -22,7 +21,6 @@ h1, h2, h3, .topnavButton a, p, ol, u, button  {
     font-family: 'Roboto Mono', monospace;
 }
 /* ------------------- */
-
 /*TOPNAV BAR*/
 .socialsAnimation:hover, .containerTestItem:hover, .topnavButton:hover
 {
@@ -40,7 +38,6 @@ img.logo{
 img.logo:hover{
     transform: rotate(360deg) translateZ(0);
 }
-
 .topnavButton a {
     text-decoration: none;
     background-color: #1F2937;
@@ -93,7 +90,6 @@ img.logo:hover{
     text-decoration: none;
     display: inline-block;
 }
-
 .topnav div {
     flex: 1 1 0;
 }
@@ -106,10 +102,7 @@ img.logo:hover{
     display: flex;
     border-bottom: 3px solid #0d1116;
 }
-
 /* ------------- */
-
-
 /* PAGE LOADING CODE (WIP) */
 #loadcontainer {
     position: fixed;
@@ -117,40 +110,34 @@ img.logo:hover{
     background: #222222;
     z-index:1000;
 }
-
 #loadcontainer .loader-left{
 left: 0;
 }
 #loadcontainer .loader-right{
 right: 0;
 }
-
 #loader {
     z-index: 3000;
 }
 h1{
     color: #EEEEEE;
 }
-
 /* Loaded */
 .loaded #loadcontainer .loader-right {
     -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: translateX(-100%);  /* IE 9 */
     transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
 }
- 
 .loaded #loadcontainer .loader-right {
     -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: translateX(100%);  /* IE 9 */
     transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
 }
-
 .loaded #loader {
     opacity: 0;
     -webkit-transition: all 0.3s ease-out;
             transition: all 0.3s ease-out;
 }
-
 .loaded #loadcontainer {
     visibility: hidden;
     -webkit-transform: translateY(-100%);
@@ -160,12 +147,10 @@ h1{
         -webkit-transition: all 0.3s 0.6s ease-out;
                 transition: all 0.3s 0.6s ease-out;
 }
-
 .loaded #loadcontainer .loader-right, .loaded #loadcontainer .loader-left {
     -webkit-transition: all 0.3s 0.3s ease-out;
             transition: all 0.3s 0.3s ease-out;
 }
-
 /* ANIMATIONS */
 @keyframes fadeOntoPageLogo {
     0%{opacity: 0;
@@ -183,7 +168,6 @@ h1{
     margin-top: 20%;
     height:40%
 }
-
 .colorstrip3 .bigText {
     position: relative; margin-top: 5%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
