@@ -4,11 +4,25 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+            .socials .tooltipDiscordtext {
+                visibility: hidden;
+                width: 150px; bottom: 100%; left: 50%; margin-left: -75px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                padding: 5px 0;
+                border-radius: 25%;
+            }
+
+            .tooltipDiscord:hover .tooltipDiscordtext{
+                visibility: visible;
+            }
             p.test, .socials, .socials a{
                 text-align: center; text-decoration: none; color:black; font-size: 20px;
                 font-family: 'Roboto Mono', monospace;
@@ -21,6 +35,8 @@
             .socialsAnimation a{position: relative; top: 26.5%;
             }
             .socialsAnimation {
+                background-color: white;
+                display: inline;
                 cursor: pointer;
                 flex: 1 1 0;
                 max-width: 50%; margin-left: auto; margin-right: auto;
@@ -60,9 +76,7 @@
                 transition: transform 0.75s ease-in-out;
                 animation: fadeOntoPageLogo 2.1s;
                 animation-iteration-count: 1;
-            }
-            img.logo:hover{
-                transform: rotate(360deg) translateZ(0);
+                z-index: 99999;
             }
 
             /* --------- */
@@ -102,21 +116,21 @@
                 <div class="loader-right"></div>
             </div>
             <!-- LOGO IN TOP LEFT-->
-            <img class ="logo" src="../images/logohd-transparent.png" alt="logo">
             <!-- -->
 
             <!-- TOP NAV BAR-->
                 <div class = "topnav">
-                        <div class ="topnavButton">
+                        <div style ="z-index: 999;" class = "topnavLogo" > <img class ="logo" src="../images/logo.jpeg" alt="logo"></div>
+                        <div style ="z-index: 90;" class ="topnavButton">
                             <br> <a href='https://www.google.com/search?client=opera-gx&q=ramen+places+nearby&sourceid=opera&ie=UTF-8&oe=UTF-8'>
                                     About Me </a> </div>
-                        <div class = "topnavButton"><br> <a href='pages/ramenfacts.html'> Test2 </a> </div>
-                        <div class = "topnavButton"><br> <a href='pages/recipe.html'> Test3</a> </div>
+                        <div style ="z-index: 91;" class = "topnavButton"><br> <a href='pages/ramenfacts.html'> Why? </a> </div>
+                        <div style ="z-index: 92;" class = "topnavButton"><br> <a href='pages/recipe.html'> Test3</a> </div>
                 </div>
             <!-- -->
             <!-- TEST ANIMATION -->
             <div class ="colorstrip3">
-                <p class="bigText"> Test </p>
+                <p class="bigText"> Hi! I'm Sam. <br> An aspiring computer science <br> student. </p>
             </div>
             <!-- -->
 
@@ -127,7 +141,7 @@
             <!-- -->
 
             <!-- GRAY STRIP QUOTE -->
-            <div class="colorstrip1"> <p> <i>" swag. "</i></p></div>
+            <div class="colorstrip1"> <p> <i>" Undefeated in the art of living. "</i></p></div>
             <br> <br>
             <!-- -->
 
@@ -160,14 +174,17 @@
             <br> <br> <br>
             <div class="socials"> 
                 <!-- INSTAGRAM-->
-                <div class="socialsAnimation" > <a href="https://www.instagram.com/samuellvo/">
+                <div style ="z-index: 91;" class="socialsAnimation" > <a href="https://www.instagram.com/samuellvo/">
                 <img src="images/instagram.png" alt="instagram logo"> <br> @samuellvo </a> </div>
 
                 <!-- DISCORD -->
-
-            <!-- -->
-
+                    <div style ="z-index: 90;" class="socialsAnimation tooltipDiscord" >
+                        <a href="https://www.discord.com">
+                        <img src="images/discordlogo.png" alt="Discord Logo"> <br> @undftdalx#0409 </a> 
+                        </div>
+                <p class="tooltipDiscordtext"> test </p>
             </div>
-            <div class="colorstrip2"> <br><br><br> <p> &#174 Thanks :]</p></div>
+            <!-- -->
+            <div class="colorstrip2"> <br><br><br> <p> &#174 Thanks for dropping by. :]</p></div>
         </body>
 </html>
