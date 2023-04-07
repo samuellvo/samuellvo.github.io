@@ -1,13 +1,10 @@
 /* css ref file for other pages */
 body{
-    background-repeat: no-repeat;
-    background-position: center 30%;
-    background-size: auto;
-    
-
-    /* */
     height: 100vh;
     padding:0; margin: 0;
+}
+html {
+    scroll-behavior: smooth;
 }
 html, body {
     min-height: 100vh;
@@ -16,13 +13,45 @@ html, body {
 .ingredientsList {
     font-size: 25px;
 }
-h1, h2, h3, .topnavButton a, p, ol, u, button  {
+h1, h2, h3, h4, h5, h6, h7, .topnavButton a, p, ol, u, button  {
     text-align: center;
     font-family: 'Roboto Mono', monospace;
 }
 /* ------------------- */
+/* -------------- */
+.background {
+    position: relative;
+    overflow:hidden;
+}
+.crop {
+    width: 150px; height: 150px;
+    position: absolute; overflow: hidden; top:30%;
+    border-radius: 150px; border: 3px solid #ED4A3D;
+    left: 15%;
+}
+.crop img.portrait{
+    display: inline;
+    margin: 0 auto;
+    margin-left: -5%;
+    height: 100%;
+    width: auto;
+
+}
+#aboutMe {
+    position: relative;
+    padding:5%;
+    background-color: #0d1116;
+    height: 25%;
+}
+.backgroundMountain {
+    display: flex;
+    z-index: 10;
+    margin-top: 0%;
+    width: 100%;
+}
+/* ---------------/
 /*TOPNAV BAR*/
-.socialsAnimation:hover, .containerTestItem:hover, .topnavButton:hover
+.socialsAnimation:hover, .containerTestItem:hover, .topnavButton:hover, .bigText:hover
 {
    transform:translateX(5%) scale(1.065);}
 .topnavButton:hover a{
@@ -107,18 +136,19 @@ img.logo:hover{
 }
 /* ------------- */
 /* PAGE LOADING CODE (WIP) */
-#loadcontainer {
+#loadcontainer .loaderblock {
     position: fixed;
     top: 0; width: 51%; height: 100%; 
     background: #222222;
     z-index:1000;
 }
-#loadcontainer .loader-left{
+#loadcontainer .loaderblock.loader-left{
 left: 0;
 }
-#loadcontainer .loader-right{
+#loadcontainer .loaderblock.loader-right{
 right: 0;
 }
+
 #loader {
     z-index: 3000;
 }
@@ -131,7 +161,7 @@ h1{
     -ms-transform: translateX(-100%);  /* IE 9 */
     transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
 }
-.loaded #loadcontainer .loader-right {
+.loaded #loadcontainer .loader-left {
     -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: translateX(100%);  /* IE 9 */
     transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
@@ -141,18 +171,17 @@ h1{
     -webkit-transition: all 0.3s ease-out;
             transition: all 0.3s ease-out;
 }
+.loaded #loadcontainer .loaderblock.loader-right, .loaderblock.loaded #loadcontainer .loader-left {
+    -webkit-transition: all 0.3s 0.3s ease-out;
+            transition: all 0.3s 0.3s ease-out;
+}
 .loaded #loadcontainer {
-    visibility: hidden;
     -webkit-transform: translateY(-100%);
             -ms-transform: translateY(-100%);
                 transform: translateY(-100%);
  
         -webkit-transition: all 0.3s 0.6s ease-out;
                 transition: all 0.3s 0.6s ease-out;
-}
-.loaded #loadcontainer .loader-right, .loaded #loadcontainer .loader-left {
-    -webkit-transition: all 0.3s 0.3s ease-out;
-            transition: all 0.3s 0.3s ease-out;
 }
 /* ANIMATIONS */
 @keyframes fadeOntoPageLogo {
@@ -168,16 +197,29 @@ h1{
 /* */
 .colorstrip3 {
     border: #1F2937 solid 5px; background-color: #1F2937;
-    margin-top: 20%;
-    height:40%
+    border-top: 3px solid #0d1116;
+    margin-top: 0%;
+    height:20%;
 }
-.colorstrip3 .bigText {
-    position: relative; margin-top: 5%;
+.bigText {
+    text-shadow: 3px 4px 1px #1F2937;
+    position: absolute; top: 37.5%; right:20%; left:20%;
     font-family: Varela;
     color:white;
     font-size: 50px;
     animation: fadeOntoPage 1s ease-in-out;
     animation-iteration-count: 1;
+    transition: 0.75s ease-in-out;
 }
 
+#aboutMeHey {
+    font-family:Varela;
+    color:#ED4A3D;
+    font-size: 15px;
+    position:absolute; top:2%; right: 30%; left: 30%;
+}
+#aboutMeHeader {
+    color:white;
+    position:absolute; top:10%; right: 30%; left: 30%;
+}
 
