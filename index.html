@@ -127,16 +127,18 @@
                         <div style ="z-index: 92;" class = "topnavButton"><br> <a href=https://www.google.com/search?client=opera-gx&q=ramen+places+nearby&sourceid=opera&ie=UTF-8&oe=UTF-8'> Test3 </a> </div>
                 </div>
             <!-- -->
-            <!-- TEST ANIMATION -->
-            <div class ="colorstrip3">
+            <!-- COLOR STRIP -->
+            <div id ="colorstrip3">
             </div>
             <!-- -->
             <!-- ABOUT ME -->
-            <div id="aboutMe">
-               <div class="crop"> <img class="portrait" src="../images/IMG_8245.png" alt="portrait"></div> 
-               <h5 id="aboutMeHey"> About</h5>
-               <h1 id="aboutMeHeader"> Let's get acquainted. </h1>
-               <p id="biography"> I'm a concurrent computer science student in California! </p>
+            <div id="aboutMeContainer">
+                <div id="aboutMe">
+                   <div class="crop"> <img class="portrait" src="../images/IMG_8245.png" alt="portrait"> </div>
+                   <h5 id="aboutMeHey"> About</h5>
+                   <h1 id="aboutMeHeader"> Let's get acquainted. </h1>
+                   <p id="biography"> I'm a concurrent computer science student in California! </p>
+                </div>
             </div>
             <!-- -->
 
@@ -190,5 +192,19 @@
             </div>
             <!-- -->
             <div class="colorstrip2"> <br><br><br> <p> &#174 Thanks for dropping by. :]</p></div>
+            <script>
+                var element1 = document.getElementById("colorstrip3");
+                var timer = setInterval(() => document.body.addEventListener("scroll", scrollAnimation()), 10)
+                function scrollAnimation() {
+                    var element2 = document.getElementById("aboutMe");
+                    if (document.scrollingElement.scrollTop > element1.offsetTop)
+                    {
+                        console.log("e")
+                        element2.style.animation = "fadeAboutMe 1s"
+                        clearInterval(timer);
+                        element2.style.opacity = 1;
+                    }
+                }
+            </script>
         </body>
 </html>

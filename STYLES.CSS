@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6, h7, .topnavButton a, p, ol, u, button  {
 }
 .crop {
     width: 150px; height: 150px;
-    position: absolute; overflow: hidden; top:30%;
+    position: absolute; overflow: hidden; top:80%;
     border-radius: 150px; border: 3px solid #ED4A3D;
     left: 15%;
 }
@@ -37,9 +37,9 @@ h1, h2, h3, h4, h5, h6, h7, .topnavButton a, p, ol, u, button  {
     width: auto;
 
 }
-#aboutMe {
+#aboutMeContainer {
     position: relative;
-    padding:5%;
+    padding:7.5%;
     background-color: #0d1116;
     height: 25%;
 }
@@ -48,6 +48,11 @@ h1, h2, h3, h4, h5, h6, h7, .topnavButton a, p, ol, u, button  {
     z-index: 10;
     margin-top: 0%;
     width: 100%;
+}
+#aboutMe {
+    position:relative; top: -50%;
+    transition: ease-in-out;
+    opacity: 0;
 }
 /* ---------------/
 /*TOPNAV BAR*/
@@ -194,8 +199,13 @@ h1{
         position:relative; margin-top: 15%;}
         100%{opacity: 1;}
     }
+@keyframes fadeAboutMe {
+    0% {opacity: 0; margin-right:50%;}
+    25%{opacity: 0.25; margin-right:37.5%;}
+    100%{opacity: 1;}
+}
 /* */
-.colorstrip3 {
+#colorstrip3 {
     border: #1F2937 solid 5px; background-color: #1F2937;
     border-top: 3px solid #0d1116;
     margin-top: 0%;
@@ -216,10 +226,13 @@ h1{
     font-family:Varela;
     color:#ED4A3D;
     font-size: 15px;
-    position:absolute; top:2%; right: 30%; left: 30%;
+    position:relative;
 }
 #aboutMeHeader {
     color:white;
-    position:absolute; top:10%; right: 30%; left: 30%;
+    position:relative;
 }
-
+#biography {
+    font-family: Varela;
+    color: white;
+}
