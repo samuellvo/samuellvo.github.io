@@ -6,6 +6,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +19,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             p.test, .socials, .socials a{
-                text-align: center; text-decoration: none; color:black; font-size: 20px;
+                text-align: center; text-decoration: none; color:black; font-size: 1.5vw;
                 font-family: 'Roboto Mono', monospace;
                 margin-top:5%;
             }
@@ -42,8 +43,8 @@
                         
             .socials {
                 display: flex; justify-content: center;
-                height: 20%;
-                padding:10px; width: 75%; margin-left: auto; margin-right: auto;
+                max-height: 20%;
+                padding:10px; max-width: 75%; margin-left: auto; margin-right: auto;
                 margin-bottom: 10px;
                 border: 1px solid black; border-radius: 20px;
                 animation: fadeOntoPageLogo 2s;
@@ -86,7 +87,7 @@
                 text-shadow: 1px 2px 1px #1F2937;
                 position: relative; top:30%;
                 color: rgb(82, 82, 82);
-                font-family:'Roboto Mono', monospace; font-size: 20px;
+                font-family:'Roboto Mono', monospace; font-size: 1.5vw;
             }
             .colorstrip2{
                 margin-top: 2.5%;
@@ -96,7 +97,7 @@
                 text-align: center;
             }
             .colorstrip2 p{
-                font-family: 'Times New Roman', Times, serif; font-size: 15px;
+                font-family: 'Times New Roman', Times, serif; font-size: 1.7vw;
                 color:#E5E7EB;
             } 
             /* --------- */ 
@@ -134,10 +135,19 @@
             <!-- ABOUT ME -->
             <div id="aboutMe">
                 <div id="aboutMeContainer">
-                   <div class="crop"> <img class="portrait" src="../images/IMG_8245.png" alt="portrait"> </div>
-                   <h5 id="aboutMeHey"> About</h5>
-                   <h1 id="aboutMeHeader"> Let's get acquainted. </h1>
-                   <p id="biography"> <br> I'm a concurrent computer science student located in California! <br>
+                   <img class="portrait" src="../images/IMG_8245.png" alt="portrait">
+                   <div class = aboutMeText>
+                       <h5 id="aboutMeHey"> About</h5>
+                       <h1 id="aboutMeHeader"> Let's get acquainted. </h1>
+                       <p id="biography"> <br> I'm a concurrent computer science student located in California. <br>
+                        Excellent to meet you!
+                                        </p>
+                   </div>
+                </div>
+            </div>
+            <!-- -->
+            <!-- REPLACE TEXT ELSEWHERE -->               
+            <!-- I'm a concurrent computer science student located in California! <br>
                                       I am particularly enthused about logic-based puzzles and their subsequent problem-solving -- <br>
                                       Unsurprisingly, and resultantly, I enjoy most STEM coursework and fields! <br><br>
 
@@ -153,13 +163,7 @@
                                       family centers, homeless shelters, etc.&#41  such that any daily, leftover bakery products can be donated<br>
                                       instead of wasting them! <br> <br> <br>
 
-                                      Needless to say, if I live and breathe tutoring, you'll find that I enjoy coding and computer science at least as much.
-
-                 </p>
-                </div>
-            </div>
-            <!-- -->
-
+                                      Needless to say, if I live and breathe tutoring, you'll find that I enjoy coding and computer science at least as much. -->
             <!-- LANDING TEXT -->
             <br> <br>
             <p class="test">" landing. "</p>
