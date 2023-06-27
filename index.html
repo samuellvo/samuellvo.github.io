@@ -114,7 +114,7 @@
             <!-- LOGO IN TOP LEFT-->
             <div id="background"> 
                 <img class="backgroundMountain" src="../images/redmountain.jpg" alt="mountain">
-                <p class="bigText"> Hi! I'm Sam. <br> An aspiring computer science <br> student. </p>
+                <p class="bigText"> Hi! I'm Sam. <br> Welcome to my <br> website. </p>
             </div>
             <!-- -->
 
@@ -137,9 +137,9 @@
                 <div id="aboutMeContainer">
                    <img class="portrait" src="../images/IMG_8245.png" alt="portrait">
                    <div class = aboutMeText>
-                       <h5 id="aboutMeHey"> About</h5>
+                       <h5 id="aboutMeHey"> About Me </h5>
                        <h1 id="aboutMeHeader"> Let's get acquainted. </h1>
-                       <p id="biography"> <br> I'm a concurrent computer science student located in California. <br>
+                       <p id="biography"> <br> I'm a Computer Science student located in California. <br>
                         Excellent to meet you!
                                         </p>
                    </div>
@@ -184,12 +184,12 @@
                 </div>
                 <div class="containerTestItem"> <a href="/pages/resume.html">
                     <img src="../images/bowloframen2.png" alt = "bor2">
-                    <p class="CTIText"> My GitHub </p>
+                    <p class="CTIText"> Friends </p>
                 </a>
                 </div>
                 <div class="containerTestItem"> <a href="/pages/resume.html">
                     <img src="../images/bowloframen3.png" alt = "bor3">
-                    <p class="CTIText"> Friends</p>
+                    <p class="CTIText"> More About Me  </p>
                     </div>
                 </a>
                 <div class="containerTestItem"> <a href="/pages/resume.html">
@@ -204,24 +204,27 @@
             <div class="socials"> 
                 <!-- INSTAGRAM-->
                 <div style ="z-index: 91;" class="socialsAnimation" > <a href="https://www.instagram.com/samuellvo/">
-                <img src="images/instagram.png" alt="instagram logo"> <br> @samuellvo </a> </div>
+                <img src="images/instagram.png" alt="Instagram Logo"> <br> @samuellvo </a> </div>
 
                 <!-- DISCORD -->
                     <div style ="z-index: 90;" class="socialsAnimation tooltipDiscord" >
                         <a href="https://www.discord.com">
-                        <img src="images/discordlogo.png" alt="Discord Logo"> <br> @undftdalx#0409 </a> 
+                        <img src="images/discordlogo.png" alt="Discord Logo"> <br> @toothx </a> 
                         </div>
-            </div>
+                <!-- EMAIL -->
+                <div style ="z-index: 89;" class="socialsAnimation"> <a href="mailto:masualov@gmail.com">
+                    <img src="images/iconEmail.png" alt="Email Logo"> <br> masualov@gmail.com </div>
+             </a></div>
             <!-- -->
             <div class="colorstrip2"> <br><br><br> <p> &#174 Thanks for dropping by. :]</p></div>
             <script>
-                element1 = document.getElementById("aboutMeTop");
                 window.addEventListener("scroll", ()=>{
-                    var element2 = document.getElementById("aboutMeContainer");
-                    if (document.scrollingElement.scrollTop > element1.offsetTop)
+                    var aboutMeContainer = document.getElementById("aboutMeContainer");
+                    var aboutMeTop = document.getElementById("aboutMeTop");
+                    if (document.scrollingElement.scrollTop > aboutMeTop.offsetTop)
                     {
-                        element2.style.animation = "fadeAboutMe 1s";
-                        element2.style.opacity = 1;
+                        aboutMeContainer.style.animation = "fadeAboutMe 1s";
+                        aboutMeContainer.style.opacity = 1;
                     }
                 });
                 window.addEventListener("scroll", ()=> {console.log("f")});
