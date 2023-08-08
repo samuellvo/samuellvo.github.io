@@ -35,7 +35,7 @@
                 cursor: pointer;
                 flex: 1 1 0;
                 max-width: 50%;
-                border:1px solid #1F2937; border-radius: 10px;
+                border:3.5px solid #1F2937; border-radius: 10px;
                 transition: transform 1.5s cubic-bezier(0, 1.53, 0.72, 0.83);
                 animation: fadeOntoPageLogo 2s;
                 animation-iteration-count: 1;
@@ -76,31 +76,6 @@
 
             /* --------- */
 
-            /* COLOR STRIPS AND TEXT */
-            .colorstrip1{
-                width: cover; height: 20%;
-                border-style: solid; border-color: #E5E7EB;
-                background-color: #E5E7EB;
-                text-align: center;
-            }
-            .colorstrip1 p {
-                text-shadow: 1px 2px 1px #1F2937;
-                position: relative; top:30%;
-                color: rgb(82, 82, 82);
-                font-family:'Roboto Mono', monospace; font-size: 1.5vw;
-            }
-            .colorstrip2{
-                margin-top: 2.5%;
-                width: cover; height: 20%;
-                border-style: solid; border-color: #1F2937;
-                background-color: #1F2937;
-                text-align: center;
-            }
-            .colorstrip2 p{
-                font-family: 'Times New Roman', Times, serif; font-size: 1.7vw;
-                color:#E5E7EB;
-            } 
-            /* --------- */ 
         </style>
         <link rel="stylesheet" href="STYLES.CSS">
         <title>Welcome!</title>
@@ -139,8 +114,8 @@
                    <div class = aboutMeText>
                        <h5 id="aboutMeHey"> About Me </h5>
                        <h1 id="aboutMeHeader"> Let's get acquainted. </h1>
-                       <p id="biography"> <br> I'm a Computer Science student located in California. <br>
-                        Excellent to meet you!
+                       <p id="biography"> <br> I'm a web application developer.
+                         <br> Excellent to meet you!
                                         </p>
                    </div>
                 </div>
@@ -165,42 +140,38 @@
 
                                       Needless to say, if I live and breathe tutoring, you'll find that I enjoy coding and computer science at least as much. -->
             <!-- LANDING TEXT -->
-            <br> <br>
-            <p class="test">" landing. "</p>
-            <br> <br>
             <!-- -->
 
             <!-- GRAY STRIP QUOTE -->
-            <div class="colorstrip1"> <p> <i>" Undefeated in the art of living. "</i></p></div>
-            <br> <br>
             <!-- -->
 
             <!-- CONTENT// ICONS AND LINKS -->
             <h2> View everything you might want to know here! </h2> <br>
             <div class="containerTest">
                 <div class="containerTestItem"> <a href="/pages/academics.html"> <img src="../images/bowloframen.png"  alt = "bor1"> 
-                <p class="CTIText"> Academics </p>
+                <p class="CTIText"> //academics </p>
                 </a>
                 </div>
                 <div class="containerTestItem"> <a href="/pages/resume.html">
                     <img src="../images/bowloframen2.png" alt = "bor2">
-                    <p class="CTIText"> Friends </p>
+                    <p class="CTIText"> //social </p>
                 </a>
                 </div>
                 <div class="containerTestItem"> <a href="/pages/resume.html">
                     <img src="../images/bowloframen3.png" alt = "bor3">
-                    <p class="CTIText"> More About Me  </p>
+                    <p class="CTIText"> //more </p>
                     </div>
                 </a>
-                <div class="containerTestItem"> <a href="/pages/resume.html">
+                <div class="containerTestItem"> <a href='#ContactMe'>
                     <img src="../images/bowloframen4.png" alt = "bor4">
-                    <p class="CTIText"> Contact Me: </p>
+                    <p class="CTIText"> //projects: </p>
                 </a>
                 </div>
             </div>
             <!-- -->
 
             <!-- SOCIALS -->
+            <div id="ContactMe">
             <div class="socials"> 
                 <!-- INSTAGRAM-->
                 <div style ="z-index: 91;" class="socialsAnimation" > <a href="https://www.instagram.com/samuellvo/">
@@ -215,8 +186,11 @@
                 <div style ="z-index: 89;" class="socialsAnimation"> <a href="mailto:masualov@gmail.com">
                     <img src="images/iconEmail.png" alt="Email Logo"> <br> masualov@gmail.com </div>
              </a></div>
+            </div>
             <!-- -->
-            <div class="colorstrip2"> <br><br><br> <p> &#174 Thanks for dropping by. :]</p></div>
+            <div class="colorstrip2"> <br><br><br> <p> &#169 toothx </p></div>
+
+
             <script>
                 window.addEventListener("scroll", ()=>{
                     var aboutMeContainer = document.getElementById("aboutMeContainer");
