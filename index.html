@@ -99,12 +99,14 @@
                         <div style ="z-index: 90;" class ="topnavButton">
                             <br> <a href='#aboutMe'>
                                     About Me </a> </div>
-                        <div style ="z-index: 91;" class = "topnavButton"><br> <a href='/pages/resume.html'> Resume </a> </div>
-                        <div style ="z-index: 92;" class = "topnavButton"><br> <a href=https://www.google.com/search?client=opera-gx&q=ramen+places+nearby&sourceid=opera&ie=UTF-8&oe=UTF-8'> Test3 </a> </div>
+                        <div style = "z-index: 91;" class = "dropdown topnavButton"> <br> <a href="/pages/Resume(2).pdf" download="SamuelVo_Resume"> Resume </a></div>
+                        <div style ="z-index: 92;" class = "topnavButton"><br> <a href='https://github.com/samuellvo' target="_blank"> Github </a> </div>
                 </div>
             <!-- -->
             <!-- COLOR STRIP -->
             <div id ="aboutMeTop">
+                <div class = "dropdownContent" id ="dropdownContent"> <a href='/pages/Resume(2).pdf' download="SamuelVoResume"> Resume! </a> 
+                </div>
             </div>
             <!-- -->
             <!-- ABOUT ME -->
@@ -157,9 +159,9 @@
                     <p class="CTIText"> //social </p>
                 </a>
                 </div>
-                <div class="containerTestItem"> <a href="/pages/resume.html">
+                <div class="containerTestItem"> <a href="/pages/moreaboutme.html">
                     <img src="../images/bowloframen3.png" alt = "bor3">
-                    <p class="CTIText"> //more </p>
+                     <p class="CTIText"> //more </p>
                     </div>
                 </a>
                 <div class="containerTestItem"> <a href='#ContactMe'>
@@ -174,12 +176,12 @@
             <div id="ContactMe">
             <div class="socials"> 
                 <!-- INSTAGRAM-->
-                <div style ="z-index: 91;" class="socialsAnimation" > <a href="https://www.instagram.com/samuellvo/">
+                <div style ="z-index: 91;" class="socialsAnimation" > <a href="https://www.instagram.com/samuellvo/" target="_blank">
                 <img src="images/instagram.png" alt="Instagram Logo"> <br> @samuellvo </a> </div>
 
                 <!-- DISCORD -->
                     <div style ="z-index: 90;" class="socialsAnimation tooltipDiscord" >
-                        <a href="https://www.discord.com">
+                        <a href="https://www.discord.com" target="_blank">
                         <img src="images/discordlogo.png" alt="Discord Logo"> <br> @toothx </a> 
                         </div>
                 <!-- EMAIL -->
@@ -192,6 +194,15 @@
 
 
             <script>
+                var dropdown = document.querySelector(".dropdown");
+                var dropdownContent = document.getElementById("dropdownContent");
+                dropdownContent.style.display = "none";
+                dropdown.addEventListener("click", ()=> {
+                    dropdownContent.style.display = (dropdownContent.style.display === "none") ? "block" : "none";
+                });
+                window.addEventListener("click", ()=> {
+                    dropdownContent.style.display = "none";
+                });
                 window.addEventListener("scroll", ()=>{
                     var aboutMeContainer = document.getElementById("aboutMeContainer");
                     var aboutMeTop = document.getElementById("aboutMeTop");
@@ -201,7 +212,6 @@
                         aboutMeContainer.style.opacity = 1;
                     }
                 });
-                window.addEventListener("scroll", ()=> {console.log("f")});
             </script>
         </body>
 </html>
