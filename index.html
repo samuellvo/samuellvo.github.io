@@ -93,19 +93,19 @@
             </div>
             <!-- -->
 
-            <!-- TOP NAV BAR-->
+            <!-- TOP NAV BAR href="/pages/Resume(2).pdf" download="SamuelVo_Resume" -->
                 <div class = "topnav">
                         <div style ="z-index: 999;" class = "topnavLogo" > <img class ="logo" src="../images/logo.jpeg" alt="logo"></div>
                         <div style ="z-index: 90;" class ="topnavButton">
                             <br> <a href='#aboutMe'>
                                     About Me </a> </div>
-                        <div style = "z-index: 91;" class = "dropdown topnavButton"> <br> <a href="/pages/Resume(2).pdf" download="SamuelVo_Resume"> Resume </a></div>
+                        <div style = "z-index: 91;" class = "topnavButton" onClick="dropdownVisible()"> <br> <a> Resume </a></div>
                         <div style ="z-index: 92;" class = "topnavButton"><br> <a href='https://github.com/samuellvo' target="_blank"> Github </a> </div>
                 </div>
             <!-- -->
             <!-- COLOR STRIP -->
             <div id ="aboutMeTop">
-                <div class = "dropdownContent" id ="dropdownContent"> <a href='/pages/Resume(2).pdf' download="SamuelVoResume"> Resume! </a> 
+                <div class = "dropdownContent" id ="dropdownContent"> <a href='/pages/Resume(2).pdf' download="SamuelVoResume"> Heads up &mdash;this downloads a PDF! </a> 
                 </div>
             </div>
             <!-- -->
@@ -189,20 +189,24 @@
                     <img src="images/iconEmail.png" alt="Email Logo"> <br> masualov@gmail.com </div>
              </a></div>
             </div>
-            <!-- -->
+            <!-- dropdownContent.style.left = "50%"; -->
             <div class="colorstrip2"> <br><br><br> <p> &#169 toothx </p></div>
 
 
             <script>
-                var dropdown = document.querySelector(".dropdown");
                 var dropdownContent = document.getElementById("dropdownContent");
-                dropdownContent.style.display = "none";
-                dropdown.addEventListener("click", ()=> {
-                    dropdownContent.style.display = (dropdownContent.style.display === "none") ? "block" : "none";
-                });
-                window.addEventListener("click", ()=> {
-                    dropdownContent.style.display = "none";
-                });
+                function dropdownVisible() {
+                    if (dropdownContent.style.top === "-999em" || dropdownContent.style.top === "") 
+                    {
+                        dropdownContent.style.animation = "dropdown 1s";
+                        dropdownContent.style.top = "10%";
+                    }
+                    else
+                    {
+                        dropdownContent.style.top = "-999em"
+                    }
+                };
+
                 window.addEventListener("scroll", ()=>{
                     var aboutMeContainer = document.getElementById("aboutMeContainer");
                     var aboutMeTop = document.getElementById("aboutMeTop");
