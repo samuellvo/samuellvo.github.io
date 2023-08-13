@@ -200,10 +200,14 @@
                     {
                         dropdownContent.style.animation = "dropdown 1s";
                         dropdownContent.style.top = "10%";
+                        setTimeout(() => {
+                            dropdownContent.style.animation = "";
+                        }, 900)
                     }
                     else
                     {
-                        dropdownContent.style.top = "-999em"
+                        dropdownContent.style.animation = "dropdownReverse 1s"
+                        dropdownContent.style.top = "-999em";
                     }
                 };
 
@@ -214,6 +218,9 @@
                     {
                         aboutMeContainer.style.animation = "fadeAboutMe 1s";
                         aboutMeContainer.style.opacity = 1;
+                        setTimeout(() => {
+                            dropdownContent.style.animation = "";
+                        }, 900)
                     }
                 });
             </script>

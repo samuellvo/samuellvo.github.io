@@ -316,8 +316,12 @@ h1{
     100%{opacity: 1;}
 }
 @keyframes dropdown {
-    0% {top: -30%}
+    0% {top: -100%}
     100% {top: 10%}
+}
+@keyframes dropdownReverse {
+    0%{top:10%}
+    100%{top:-100%}
 }
 /* moreAboutMe media screen queries */
 
