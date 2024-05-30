@@ -1,41 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academics</title>
+    <title>Document</title>
     <style>
-    .academicListContainer{
-        position: absolute;
-        top:30%; left: 17%;
-    }        
+    @media only screen and (max-width: 430px) {
+    .console { height: 50vh; width: 80vw;
+        border-radius: 5%;
+        z-index: 100;
+        position: relative;
+        margin-left: auto; margin-right: auto; margin-top: 20%;
+        background-color: rgba(60, 60, 60, 1);
+    }
+    .console .question{
+        margin-left: 1vh;
+        color: white;
+        text-align: left;
+    }
+    .console .answer{
+        margin-left: 3vh;
+        color: wheat;
+        text-align: left;
+    }
+    .topConsoleBar {
+        z-index: 101;
+        width: inherit;
+        height: 3vh;
+        background-color: rgba(200, 200, 200, 1)
+    }
+    .topConsoleBar p{
+        margin-left: 3.5%;
+        margin-top: -2.5vh;
+        color:black;
+    }
+
+    .dot {
+        margin-top: 1vh;
+        margin-left: 1vh;
+        height: 1.5vh;
+        width: 1.5vh;
+        background-color: black;
+        border-radius: 50%;
+        display: inline-block;
+    } 
+
+    .blurb {
+        text-align: left;
+        font-size: 3vw;
+        padding-bottom: 5vh;
+        padding-left: 2vw; padding-right: 2vw;
+    }
+}
     </style>
     <link rel="stylesheet" href="/STYLES.CSS">
 </head>
-
-
 <body>
 <!-- TOP NAV BAR-->
-            <div class = "topnav">
-                <div style ="z-index: 999;" class = "topnavLogo" > <img class ="logo" src="../images/logo.jpeg" alt="logo"></div>
-                <div style ="z-index: 90;" class ="topnavButton">
-                    <br> <a href='/#aboutMe'>
-                            About Me </a> </div>
-                <div style ="z-index: 91;" class = "topnavButton"><br> <a href='/pages/resume.html'> Resume </a> </div>
-                <div style ="z-index: 92;" class = "topnavButton"><br> <a href=https://www.google.com/search?client=opera-gx&q=ramen+places+nearby&sourceid=opera&ie=UTF-8&oe=UTF-8'> Test3 </a> </div>
-        </div>
-    <!-- -->
-    
-</div>
-    <div class="academicListContainer"> <p> Major-related Coursework: </p>
-        <ul>
-        </ul>
-</div>
+<div class = "topnav">
+    <div style ="z-index: 999;" class = "topnavLogo" > <img class ="logo" src="../images/logo.jpeg" alt="logo"></div>
+        <div style ="z-index: 102;" class ="topnavButton"> <br> <a href='/index.html'> Home </a> </div>
+        <div style = "z-index: 103;" class = "topnavButton" onClick="dropdownVisible()"> <br> <a> Resume </a></div>
+        <div style ="z-index: 104;" class = "topnavButton"><br> <a href='https://github.com/samuellvo' target="_blank"> Github </a> </div>
+    </div>
+<!-- -->
+
+<div class = "console"> 
+    <div class ="topConsoleBar">
+        <span style = "background-color: tomato;" class = "dot"></span>
+        <span style = "background-color: gold;" class = "dot"></span>
+        <span style = "background-color: greenyellow;" class = "dot"></span>
+        <p> Coursework & Awards </p>
+    </div> <!-- end of topConsoleBar div -->
+    <p class = "question" >> cd C://User/sam/Mathematics <br> >> ls</p>
+    <p class = "answer" > >> Statistics
+        <br> >> Differential Calculus
+        <br> >> Integral Calculus
+        <br> >> Multivariable Calculus
+        <br> >> Ordinary Differential Equations
+        <br> >> Linear Algebra
+        <!-- <br> -> Differential Equations -->
+        <!-- <br> -> Linear Algebra -->
+    </p>
+    <p class = "question" >> cd C://User/sam/Physics <br> >> ls</p>
+    <p class = "answer"> >> Classical Mechanics
+        <br> >> Electromagnetism
+        <br> >> Thermodynamics
+        <br> >> Wave-Optics, Relativity, Intro to Quantum Mechanics
+    </p>
+    <p class = "question" >> cd C://User/sam/Computer_Science <br> >> ls</p>
+    <p class = "answer" > >> C++, C++ II
+        <br> >> Python
+        <br> >> UNIX/LINUX Op. Sys.
+        <br> >> Discrete Struc. & Alg.
+        <br> >> Comp. Architecture
+        <br> >> Webpage Authoring / Web Development
+    </p>
+
+    <p class = "question">> cd C://User/sam/Awards <br> >> ls
+    <p class = "answer" > >> Dean's List, President's Honor Roll // TCHS, Gavilan College
+        <br> >> AP Scholar, with Honors // College Board
+        <br> >> AP Scholar, with Distinction // College Board
+        <br> >> Panera Dream Project, National Scholarship Competition Winner // Panera Bread
+        <br> >> MESA Rising Stars Award, MESA Award of Academic Excellence // MESA
+        <br> >> Gavilan College Faculty Association Scholarship // Gavilan College
+    </p>
+    </p>
+</div> <!-- end of console div -->
+
+<div style = "color:white;" class="colorstrip2"> <p> &#169 toothx </p></div>
+
+
+<div style="z-index: 101;"class = "dropdownContent" id ="dropdownContent"> <a href='/pages/Resume(2).pdf' download="SamuelVoResume"> Heads up &mdash;this downloads a PDF! </a>
+
+<script>
+                    var dropdownContent = document.getElementById("dropdownContent");
+                function dropdownVisible() {
+                    if (dropdownContent.style.top === "-999em" || dropdownContent.style.top === "") 
+                    {
+                        dropdownContent.style.animation = "dropdown 1s";
+                        dropdownContent.style.top = "10%";
+                        setTimeout(() => {
+                            dropdownContent.style.animation = "";
+                        }, 900)
+                    }
+                    else
+                    {
+                        dropdownContent.style.animation = "dropdownReverse 1s"
+                        dropdownContent.style.top = "-999em";
+                    }
+                };
+</script>
 </body>
 </html>
